@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 data = pd.read_csv('datasets/kc_house_data.csv')
 
@@ -36,7 +37,7 @@ house = data.loc[data['bathrooms'] == 2, :]
 print("Ha", len(house), "casas com 2 banheiros")
 print()
 print("Qual o preço médio de todas as casas no conjunto de dados?")
-print("O preco medio e de:", data['price'].mean())
+print("O preco medio e de: $", np.round(data['price'].mean(), 2))
 print()
 
 
