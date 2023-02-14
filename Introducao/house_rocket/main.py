@@ -74,4 +74,6 @@ print()
 """
 OBSERVACOES:
 
+- Sobre o Axis: Whether to drop labels from the index (0 or ‘index’) or columns (1 or ‘columns’).
+- Sobre o .loc: ele busca por index, nao por posiçao, por isso foi feito o reset
 """
