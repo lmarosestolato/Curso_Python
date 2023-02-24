@@ -30,10 +30,21 @@ mapa = px.scatter_mapbox(data_map, lat= 'lat', lon= 'long',
                   color_discrete_sequence= ['blue'],
                   zoom= 3, height= 300)
 
-mapa.show()
-
 #Melhorando o layout
 mapa.update_layout(mapbox_style = 'open-street-map')
-mapa.update_layout(height = '600', margin = {'r':0, 't':0, 'l':0, 'b':0})
+mapa.update_layout(height = 600, margin = {'r':0, 't':0, 'l':0, 'b':0}) 
+
+#Salvando mapa em HTML
+mapa.write_html('datasets/mapa_house_rocket.html')
+
+
+"""
+Observações:
+
+O cod mapa.show() deveria mostrar uma previa do mapa, mas dependendo dos cookies do
+navegador, apresenta erro: Não consigo chegar a esta página / 127.0.0.1 recusou a conexão.
+Gerando o arquivo HTML do mapa, abre normalmente.
+"""
+
 
 
